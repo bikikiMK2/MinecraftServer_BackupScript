@@ -10,13 +10,13 @@ ZIPNAME=world{$CURRENT_DATE}.zip # set name as zipped world data
 set -e
 
 echo Backup Process is Starting # to command-rine
-screen -RdS $SCREEN_NAME -X stuff 'say Server Backup is Starting!'`echo -ne '\015'` # to SCREEN_NAME
+screen -RdS $SCREEN_NAME -X stuff 'say §dServer Backup is Starting!'`echo -ne '\015'` # to SCREEN_NAME
 cd $SERVER_DIR
 
 echo Saving World Data... # to command-rine
-screen -RdS $SCREEN_NAME -X stuff 'say Saving World Data...'`echo -ne '\015'` # to SCREEN_NAME
+screen -RdS $SCREEN_NAME -X stuff 'say §dSaving World Data...'`echo -ne '\015'` # to SCREEN_NAME
 zip -q -r $SERVER_DIR/$ZIPNAME $WORLD_DIR # archiving to zip then this here
 
 mv $ZIPNAME $BUCKUP_DIR # move zipped file to BUCKUP_DIR from SERVER_DIR
 echo Backup Process is Done # to command-rine
-screen -RdS $SCREEN_NAME -X stuff 'say Server Backup is Done!'`echo -ne '\015'` # to SCREEN_NAME
+screen -RdS $SCREEN_NAME -X stuff 'say §dServer Backup is Done!'`echo -ne '\015'` # to SCREEN_NAME
