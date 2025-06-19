@@ -1,6 +1,6 @@
 # MinecraftServer_BackupScript
 
-## Required  Sepecial Commands 
+## Required  Sepecial Commands
 
 * screen
 * zip
